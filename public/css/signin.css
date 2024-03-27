@@ -1,0 +1,148 @@
+
+.signincontainer
+{
+  margin: 50px 0;
+}
+.signincontainer .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  border: 2px solid royalblue;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.signincontainer .title {
+  display: flex;
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.signincontainer .title::before,
+.signincontainer .title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.signincontainer .title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.signincontainer .title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.signincontainer .message,
+.signincontainer .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signincontainer .signin {
+  text-align: center;
+}
+
+.signincontainer .signin a {
+  color: royalblue;
+}
+
+.signincontainer .signin a:hover {
+  text-decoration: underline royalblue;
+}
+.signincontainer .form label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.signincontainer .form label .show
+{
+  height: 100%;
+  width: 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.signincontainer .form label .show:hover
+{
+  cursor: pointer;
+}
+.signincontainer .form label .input {
+  width: 100%;
+  padding: 20px 10px 10px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.signincontainer .form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.signincontainer .form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.signincontainer .form label .input:focus + span,
+.signincontainer .form label .input:valid + span {
+  top: 5px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.signincontainer .form label .input:valid + span {
+  color: green;
+}
+
+.signincontainer .submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.signincontainer .submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
